@@ -29,7 +29,7 @@ module Guard
 
     private
 
-    def run(paths = ['.'])
+    def run(paths = ['app/views'])
       result = system "slim-lint #{paths.join(' ')}"
       if result
         UI.info 'No Slim offences detected'.green
